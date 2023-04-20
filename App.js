@@ -1,4 +1,6 @@
-"use Strict";
+"use Strict"; // javascript is very loosey language
+
+//dom variable
 const height = document.getElementById("height");
 const weight = document.getElementById("weight");
 const age = document.getElementById("age");
@@ -36,8 +38,8 @@ async function generateInitialMeal(){
     const data = await initialMeal()
     await mealData(data.meals);
 }
-generateInitialMeal();
 
+generateInitialMeal();
 //Calculating the calories of the user
 async function mealColories() {
     let bmrMale = 66.47 + (13.75 * weight.value) + (5.003 * height.value) - (6.755 * age.value);
@@ -138,21 +140,6 @@ function generateHTML(results) {
                 }
             }
         }
-        // for(let j=0;j<results.analyzedInstructions.length;j++){
-        //     let apiEqipment = results.analyzedInstructions[j].steps;
-        //     for(let i=0;i<apiEqipment.length;i++){
-        //         let apiEqipment2 = apiEqipment[i].equipment;
-        //         for(let k=0;k<apiEqipment2.length;k++){
-        //             let para = document.createElement("li");
-        //             let newPara = apiEqipment2[k].name;
-        //             if(!arr.includes(newPara)){
-        //                 arr.push(newPara);
-        //                 para.innerHTML = newPara;
-        //                 equipment.appendChild(para);
-        //             }
-        //         }
-        //     }
-        // }
 
         //Adding the Steps
         steps.innerHTML = " ";
